@@ -1,0 +1,175 @@
+1	3	Bulbasaur	Grass	Poison	0.7	6.9	Overgrow		Chlorophyll	45	Medium Slow	70	64	0,0,0,1,0,0	45,49,49,65,65,45
+2		Ivysaur	Grass	Poison	1.0	13.0	Overgrow		Chlorophyll	45	Medium Slow 70	142	0,0,0,1,1,0	60,62,63,80,80,60
+3		Venusaur	Grass	Poison	2.0	100.0	Overgrow		Chlorophyll	45 Medium Slow	70	236	0,0,0,2,1,0	80,82,83,100,100,80
+4	3	Charmander	Fire		0.6	8.5	Blaze		Solar Power	45 Medium Slow	70	62	0,0,0,0,0,1	30,52,43,60,50,65
+5		Charmeleon	Fire		1.1	19.0	Blaze		Solar Power	45 Medium Slow	70	142	0,0,0,1,0,1	
+6		Charizard	Fire	Flying	1.7	90.5	Blaze		Solar Power	45 Medium Slow	70	240	0,0,0,3,0,0
+7	3	Squirtle	Water		0.5	9.0	Torrent		Rain Dish	45 Medium Slow	70	63	0,0,1,0,0,0
+8		Wartortle	Water		1.0	22.5	Torrent		Rain Dish	45 Medium Slow	70	142	0,0,1,0,1,0
+9		Blastoise	Water		1.6	85.5	Torrent		Rain Dish	45	Medium Slow	70	239	0,0,0,0,3,0	79,83,100,85,105,78
+10		Caterpie	Bug		0.3	2.9	Shield Dust		Run Away
+11		Metapod	Bug		0.7	9.9	Shed Skin		
+12		Butterfree	Bug	Flying	1.1	32.0	Compound Eyes		Tinted Lens
+13		Weedle	Bug	Poison	0.3	3.2	Shield Dust		Run Away
+14		Kakuna	Bug	Poison	0.6	10.0	Shed Skin		
+15		Beedrill	Bug	Poison	1.0	29.5	Swarm		Sniper
+16		Pidgey	Normal	Flying	0.3	1.8	Keen Eye	Tangled Feet	Big Pecks
+17		Pidgeotto	Normal	Flying	1.1	30.0	Keen Eye	Tangled Feet	Big Pecks
+18		Pidgeot	Normal	Flying	1.5	39.5	Keen Eye	Tangled Feet	Big Pecks
+19		Rattata	Normal		0.3	3.5	Run Away	Guts	Hustle
+20		Raticate	Normal		0.7	18.5	Run Away	Guts	Hustle
+21		Spearow	Normal	Flying	0.3	2.0	Keen Eye		Sniper
+22		Fearow	Normal	Flying	1.2	38.0	Keen Eye		Sniper
+23		Ekans	Poison		2.0	6.9	Intimidate	Shed Skin	Unnerve
+24		Arbok	Poison		3.5	65.0	Intimidate	Shed Skin	Unnerve
+25		Pikachu	Electric		0.4	6.0	Static		Lightning Rod
+26		Raichu	Electric		0.8	30.0	Static		Lightning Rod
+27		Sandshrew	Ground		0.6	12.0	Sand Veil		Sand Rush
+28		Sandslash	Ground		1.0	29.5	Sand Veil		Sand Rush
+29		Nidoran F	Poison		0.4	7.0	Poison Point	Rivalry	Hustle
+30		Nidorina	Poison		0.8	20.0	Poison Point	Rivalry	Hustle
+31		Nidoqueen	Poison	Ground	1.3	60.0	Poiosn Point	Rivalry	Sheer Force
+32		Nidoran M	Poison		0.5	9.0	Poison Point	Rivalry	Hustle
+33		Nidorino	Poison		0.9	19.5	Poison Point	Rivalry	Hustle
+34		Nidoking	Poison	Ground	1.4	62.0	Poison Point	Rivalry	Sheer Force
+35		Clefairy	Fairy		0.6	7.5	Cute Charm	Magic Guard	Friend Guard
+36		Clefable	Fairy		1.3	40.0	Cute Charm	Magic Guard	Unaware
+37		Vulpix	Fire		0.6	9.9	Flash Fire		Drought
+38		Ninetales	Fire		1.1	19.9	Flash Fire		Drought
+39		Jigglypuff	Normal	Fairy	0.5	5.5	Cute Charm	Competitive	Friend Guard
+40		Wigglytuff	Normal	Fairy	1.0	12.0	Cute Charm	Competitive	Frisk
+41		Zubat	Poison	Flying	0.8	7.5	Inner Focus		Infiltrator
+42		Golbat	Poison	Flying	1.6	55.0	Inner Focus		Infiltrator
+43		Oddish	Grass	Poison	0.5	5.4	Chlorophyll		Run Away
+44		Gloom	Grass	Poison	0.8	8.6	Chlorophyll		Stench
+45		Vileplume	Grass	Poison	1.2	18.6	Chlorophyll		Effect Spore
+46		Paras	Bug	Grass	0.3	5.4	Effect Spore	Dry Skin	Damp
+47		Parasect	Bug	Grass	1.0	29.5	Effect Spore	Dry Skin	Damp
+48		Venonat	Bug	Poison	1.0	30.0	Compound Eyes	Tinted Lens	Run Away
+49		Venomoth	Bug	Poison	1.5	12.5	Shield Dust	Tinted Lens	Wonder Skin
+50		Diglett	Ground		0.2	0.8	Sand Veil	Arena Trap	Sand Force
+51		Dugtrio	Ground		0.7	33.3	Sand Veil	Arena Trap	Sand Force
+52		Meowth	Normal		0.4	4.2	Pickup	Technician	Unnerve
+53		Persian	Normal		1.0	32.0	Limber	Technician	Unnerve
+54		Psyduck	Water		0.8	19.6	Damp	Cloud Nine	Swift Swim
+55		Golduck	Water		1.7	76.6	Damp	Cloud Nine	Swift Swim
+56		Mankey	Fighting		0.5	28.0	Vital Spirit	Anger Point	Defiant
+57		Primeape	Fighting		1.0	32.0	Vital Spirit	Anger Point	Defiant
+58		Growlithe	Fire		0.7	19.0	Intimidate	Flash Fire	Justified
+59		Arcanine	Fire		1.9	155.0	Intimidate	Flash Fire	Justified
+60		Poliwag	Water		0.6	12.4	Water Absorb	Damp	Swift Swim
+61		Poliwhirl	Water		1.0	20.0	Water Absorb	Damp	Swift Swim
+62		Poliwrath	Water	Fighting	1.3	54.0	Water Absorb	Damp	Swift Swim
+63		Abra	Psychic		0.9	19.5	Synchronize	Inner Focus	Magic Guard
+64		Kadabra	Psychic		1.3	56.5	Synchronize	Inner Focus	Magic Guard
+65		Alakazam	Psychic		1.5	48.0	Synchronize	Inner Focus	Magic Guard
+66		Machop	Fighting		0.8	19.5	Guts	No Guard	Steadfast
+67		Machoke	Fighting		1.5	70.5	Guts	No Guard	Steadfast
+68		Machamp	Fighting		1.6	130.0	Chlorophyll		Gluttony
+69		Bellsprout	Grass	Poison	0.7	4.0	Chlorophyll		Gluttony
+70		Weepinbell	Grass	Poison	1.0	6.4	Chlorophyll		Gluttony
+71		Victreebel	Grass		1.7	15.5	Chlorophyll		Gluttony
+72		Tentacool	Water	Poison	0.9	45.5	Clear Body	Liquid Ooze	Rain Dish
+73		Tentacruel	Water	Poison	1.6	55.0	Clear Body	Liquid Ooze	Rain Dish
+74		Geodude	Rock	Ground	0.4	20.0	Rock Head	Sturdy	Sand Veil
+75		Graveler	Rock	Ground	1.0	105.0	Rock Head	Sturdy	Sand Veil
+76		Golem	Rock	Ground	1.4	300.0	Rock Head	Sturdy	Sand Veil
+77		Ponyta	Fire		1.0	30.0	Run Away	Flash Fire	Flame Body
+78		Rapidash	Fire		1.7	95.0	Run Away	Flash Fire	Flame Body
+79		Slowpoke	Water	Psychic	1.2	36.0	Oblivious	Own Tempo	Regenerator
+80		Slowbro	Water	Psychic	1.6	78.5	Oblivious	Own Tempo	Regenerator
+81		Magnemite	Electric	Steel	0.3	6.0	Magnet Pull	 Sturdy	 Analytic
+82		Magneton	Electric	Steel	1.0	60.0	Magnet Pull	 Sturdy	Analytic
+83		Farfetch'd	Normal	Flying	0.8	15.0	Keen Eye	Inner Focus	Defiant
+84		Doduo	Normal	Flying	1.4	39.2.0	Run Away	Early Bird	Tangled Feet
+85		Dodrio	Normal	Flying	1.8	85.2	Run Away	Early Bird	Tangled Feet
+86		Seel	Water		1.1	90.0	Thick Fat	Hydration	Ice Body
+87		Dewgong	Water	Ice	1.7	120.0	Thick Fat	Hydration	Ice Body
+88		Grimmer	Poison		0.9	30.0	Stench	Sticky Hold	 Poison Touch
+89		Muk	Poison		1.2	30.0	Stench	Sticky Hold	Poison Touch
+90		Shellder	Water		0.3	4.0	Shell Armor	Skill Link	Overcoat
+91		Cloyster	Water	Ice	1.5	132.5	Shell Armor	Skill Link	Overcoat
+92		Gastly	Ghost	Poison	1.3	0.1	Levitate		
+93		Haunter	Ghost	Poison	1.6	0.1	Levitate		
+94		Gengar	Ghost	Poison	1.5	40.5	Cursed Body		
+95		Onix	Rock	Ground	8.8	210.0	Rock Head	Sturdy	Weak Armor
+96		Drowzee	Psychic		1.0	32.4	Insomnia	Forewarn	Inner Focus
+97		Hypno	Psychic		1.6	75.6	Insomnia Forewarn	Inner Focus
+98		Krabby	Water		0.4	6.5	Hyper Cutter	Shell Armor	Sheer Force
+99		Kingler	Water		1.3	60.0	Hyper Cutter	Shell Armor	Sheer Force
+100		Voltorb	Electric		0.5	10.4	Soundproof	Static	Aftermath
+101		Electrode	Electric		1.2	66.6	Soundproof	Static	Aftermath
+102		Exeggcute	Grass	Psychic	0.4	2.5		Chlorophyll		Harvest
+103		Exeggutor	Grass	Psychic	2.0	120.0	Chlorophyll		Harvest
+104		Cubone	Ground		0.4	6.5	Rock Head	Lightning Rod	Battle Armor
+105		Marowak	Ground		1.0	45.0	Rock Head	Lightning Rod	Battle Armor
+106		Hitmonlee	Fighting		1.5	49.8	Limber	Iron Fist	Inner Focus
+107		Hitmonchan	Fighting		1.4	50.2	Keen Eye	Iron Fist	Inner Focus
+108		Lickitung	Normal		1.2	65.5	Own Tempo	Oblivious	Cloud Nine
+109		Koffing	Poison		0.6	1.0	Levitate	Neutralizing Gas	Stench
+110		Weezing	Poison		1.2	9.5	Levitate	Neutralizing Gas	Stench
+111		Rhyhorn	Ground	Rock	1.0	115.0	Lightning Rod	Rock Head	Reckless
+112		Rhydon	Ground	Rock	1.9	120.0	Lightning Rod	Rock Head	Reckless
+113		Chansey	Normal		1.1	34.6	Natural Cure	Serene Grace	Healer
+114		Tangela	Grass		1.0	35.0	Chlorophyll	Leaf Guard	Regenerator
+115		Kangaskhan	Normal		2.2	80.0	Early Bird	Scrappy	Inner Focus
+116		Horsea	Water		0.4	8.0	Swift swim	Sniper	Damp
+117		Seadra	Water		1.2	25.0	Poison Point	Sniper	Damp
+118		Goldeen	Water		0.6	15.0	Swift Swim	Water Veil	Lightning Rod
+119		Seaking	Water		1.3	39.0	Swift Swim	Water Veil	Lightning Rod
+120		Staryu	Water		0.8	34.5	Illuminate	Natural Cure	Analytic
+121		Starmie	Water	Psychic	1.1	80.0	Illuminate	Natural Cure	Analytic
+122		Mr.Mime	Psychic	Fairy	1.3	54.5	Soundproof	Filter	Technician
+123		Scyther	Bug	Flying	1.5	56.0	Swarm	Technician	Steadfast
+124		Jynx	Ice	Psychic	1.4	40.6	Oblivious	Forewarn	Dry Skin
+125		Electabuzz	Electric		1.1	30.0	Static		Vital Spirit
+126		Magmar	Fire		1.3	44.5	Flame Body		Vital Spirit
+127		Pinsir	Bug		1.5	55.0	Hyper Cutter	Mold Breaker	Moxie
+128		Tauros	Normal		1.4	88.4	Intimidate	Anger Point	Sheer Force
+129		Magikarp	Water		0.9	10.0	Swift Swim		Rattled
+130		Gyarados	Water	Flying	6.5	235.0	Intimidate		Moxie
+131		Lapras	Water	Ice	2.5	220.0	Water Absorb	Shell Armor	Hydration
+132		Ditto	Normal		0.3	4.0	Limber		Imposter
+133		Eevee	Normal		0.3	6.5	Run Away	Adaptability	Anticipation
+134		Vaporeon	Water		1.0	29.0	Water absorb		Hydration
+135		Jolteon	Electric		0.8	24.5	Volt Absorb		Quick Feet
+136		Flareon	Fire		0.9	25.0	Flash Fire		Guts
+137		Porygon	Normal		0.8	36.5	Trace	Download	Analytic
+138		Omanyte	Rock	Water	0.4	7.5	Swift Swim	Shell Armor	Weak Armor
+139		Omastar	Rock	Water	1.0	35.0	Swift Swim	Shell Armor	Weak Armor
+140		Kabuto	Rock	Water	0.5	11.5	Swift Swim	Battle Armor	Weak Armor
+141		Kabutops	Rock	Water	1.3	40.5	Swift Swim	Battle Armor	Weak Armor
+142		Aerodactyl	Rock	Flying	1.8	59.0	Rock Head	Pressure	Unnerve
+143		Snorlax	Normal		2.1	460.0	Immunity	Thick Fat	Gluttony
+144		Articuno	Ice	Flying	1.7	55.4	Pressure		Snow Cloak
+145		Zapdos	Electic	Flying	1.6	52.6	Pressure		Static
+146		Moltres	Fire	Flying	2.0	60.0	Pressure		Flame Body
+147		Dratini	Dragon		1.8	3.3	Shed Skin		Marvel Scale
+148		Dragonair	Dragon	4.0	16.5	Shed Skin		Marvel Scale
+149		Dragonite	Dragon	Flying	2.2	210.0	Inner Focus		Multiscale
+150		Mewtwo	Psychic	2.0	122.0	Pressure	Unnerve
+151		Mew	Psychic	0.4	4.0	Synchronize		
+152	2	Chikorita	Grass			0.9	6.4	Overgrow		Leaf Guard	
+155	3	Cyndaquil	Fire		0.5	7.9	Blaze		Flash Fire
+158	3	Totodile	Water		0.6	9.5	Torrent		Sheer Force
+251	3	Treecko	Grass		0.5	5.0	Overgrow		Unburden
+254	4	Torchic	Fire		0.4	2.5	Blaze		Speed Boost
+257	3	Mudkip	Water		0.4	7.6	Torrent		Damp
+387	3	Turtwig	Grass		0.4	10.2	Overgrow		Shell Armor
+389	3	Chimchar	Fire		0.5	6.2	Blaze		Iron Fist
+393	3	Piplup	Water		0.4	5.2	Torrent		Competitive
+495	3	Snivy	Grass		0.6	8.1	Overgrow		Contrary
+498	3	Tepig	Fire		0.5	9.9	Blaze		Thick Fat
+501	3	Oshawott	Water		0.5	5.9	Torrent		Shell Armor
+650	3	Chespin	Grass		0.4	9.0	Overgrow		BulletProof
+653	3	Fennekin	Fire		0.4	9.4	Blaze		Magician
+656	4	Froakie	Water		0.3	7.0	Torrent		Protean
+722	3	Rowlet	Grass	Flying	0.3	1.5	Overgrow		Long Reach
+725	3	Litten	Fire		0.4	4.3	Blaze		Intimidate
+728	4	Popplio	Water		0.4	7.5	Torrent		Liquid Voice
+810	3	Grookey	Grass		0.3	5.0	Overgrow		Grassy Surge
+813	4	Scorbunny	Fire		0.3	4.5	Blaze		Libero
+816	3	Sobble	Water		0.3	4.0	Torrent		Sniper
+906	4	Sprigatito	Grass		0.4	4.1	Overgrow		Protean
+909	4	Fuecoco	Fire		0.4	9.8	Blaze		Unaware
+912	4	Quaxly	Water		0.5	6.1	Torrent		Moxie
