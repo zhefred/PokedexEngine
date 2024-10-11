@@ -55,11 +55,6 @@ def create_starting_team(starting_amount):
         #get your current team
         current_team = fetch_all("SELECT pokedex_nbr FROM team")
 
-        if current_team:
-            current_team = [pokemon[0] for pokemon in current_team]
-        else :
-            current_team = []
-
         query = "SELECT pokedex_nbr, price, name FROM pokedex WHERE pokedex_nbr NOT IN ({})".format(
             ','.join('?' * len(current_team))
         )
