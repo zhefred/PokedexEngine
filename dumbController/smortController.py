@@ -5,13 +5,6 @@
 - Guider le code pour éviter qu'il aie à lire à l'écran (pour le moment)
 """
 import db_handler
-import random
-
-#Start the db
-db_handler.initialize_database()
-
-#Set up the commands
-
 
 """|OFFo oON                  |
    | .----------------------. |
@@ -39,8 +32,15 @@ db_handler.initialize_database()
    |                   ,:;:'.'
    '-----------------------`
 """
-#New Game
-print("please start a new game")
 
-#select random pokemons
-#db_handler.get_pokemon_info(1)
+def main():
+    #Start the db
+    db_handler.initialize_database()
+    #New Game
+    print("please start a new game")
+
+    #select random pokemons for the starter team
+    starting_amount = 10
+    db_handler.create_starting_team(10)
+if __name__ == "__main__":
+    main()

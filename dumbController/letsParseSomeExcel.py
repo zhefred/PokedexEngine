@@ -11,7 +11,7 @@ for pokemon in range(0, len(raw_pokeDb)):
 
 sqlite_query = open("./dumbController/sql_query_file.txt", "w")
 
-sqlite_query.write("INSERT INTO\n   pokemon (pokedex_nbr, name, type1, type2, height, weight, ability1, ability2)\nVALUES\n")
+sqlite_query.write("INSERT INTO\n   pokemon (pokedex_nbr, price, name, type1, type2, height, weight, ability1, ability2)\nVALUES\n")
 
 for x in range(len(pokeDb)):
     pokemon_infos = "   ("
