@@ -4,7 +4,7 @@ from pynput.keyboard import Key, Controller
 
 print("booting up...")
 
-inputs = [  'w',    'a',    's',    'd',        'x',    'z']
+inputs = [  'w',    'a',    's',    'd',        'z',    'x']
 DS_KEYS = ["UP",    "LEFT", "DOWN", "RIGHT",    "A",    "B",      "X",       "Y",      "START",   "SELECT"]
 action = Controller()
 

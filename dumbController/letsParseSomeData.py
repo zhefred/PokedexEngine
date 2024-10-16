@@ -1,4 +1,5 @@
-f = open("./dumbController/pokeDb.txt", "r")
+
+f = open("./pokedata/raw_pokemons_file.txt", "r")
 raw = f.read()
 f.close()
 
@@ -9,7 +10,7 @@ pokeDb = [[0] for i in range(len(raw_pokeDb))]
 for pokemon in range(0, len(raw_pokeDb)):
     pokeDb[pokemon] = raw_pokeDb[pokemon].split("\t")
 
-sqlite_query = open("./dumbController/sql_query_file.txt", "w")
+sqlite_query = open("./pokedata/parsed_pokemons_file.txt", "w")
 
 sqlite_query.write("INSERT INTO\n   pokemon (pokedex_nbr, price, name, type1, type2, height, weight, ability1, ability2)\nVALUES\n")
 
