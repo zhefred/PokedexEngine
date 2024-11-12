@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokédex!</h1>
+    <ul>
+        {% for row in rows %}
+            <li>{{ row[0] }} - {{ row[2] }}
+                <img src="{{ url_for('static', filename='images/substitute.png') }}">
+                <a href="https://pokedb.org/pokemon/{{ row[2] | lower }}">Go to pokedex</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
