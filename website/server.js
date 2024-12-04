@@ -5,6 +5,20 @@ const path = require('path');
 const app = express();
 const port = 8080;
 
+const dbPath = path.join(__dirname, 'pokeDb.sqlite');
+const db = new sqlite3.Database(dbPath, (err) => {
+    if (err) {
+        console.error('Error connecting to the database : ', err.message);
+    } else {
+        console.log('Connected to the SQLite database')
+    }
+});
+
+const stylesheet = path.join(__dirname, 'style.css');
+
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
@@ -19,9 +33,9 @@ app.get('/playnow', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'playnow.html'));
 })
 
-app.get('/api/messages', (req, res) => {
-    const db = new sqlite3.Database('pokeDb.db');
-    db.all('SELECT * FROM messages', [], (err, rows) => {
+app.get('/api/pokedex', (req, res) => {
+
+    db.all('SELECT * FROM pokedex', [], (err, rows) => {
         if (err) {
             res.status(500).json({ error: err.message });
             return;

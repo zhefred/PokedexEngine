@@ -1,11 +1,12 @@
 {
   "name": "PokemonDB",
-  "version" : "0.0.1",
+  "version": "0.0.1",
   "main": "server.js",
   "scripts": {
     "start": "nodemon website/server.js"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.1",
     "sqlite3": "^5.1.7"
   },
