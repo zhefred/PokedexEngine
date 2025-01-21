@@ -42,7 +42,7 @@ app.get('/api/pokedex', (req, res) => {
     const pokemon_nbr = req.query.pokemon_number;
 
     if(pokemon_nbr) {
-        db.all('SELECT * FROM pokemon WHERE pokedex_nbr = ?', [pokemon_nbr], (err,rows) => {
+        db.all('SELECT * FROM pokedex WHERE pokedex_nbr = ?', [pokemon_nbr], (err,rows) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }
@@ -54,7 +54,7 @@ app.get('/api/pokedex', (req, res) => {
             }
         });
     } else {
-        db.all('SELECT * FROM pokemon', [], (err, rows) => {
+        db.all('SELECT * FROM pokedex', [], (err, rows) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }

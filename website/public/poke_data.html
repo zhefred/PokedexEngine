@@ -38,8 +38,10 @@
 
                         pokeSprite.src = `../static/images/official-artwork/${pokedexNbr}.png`;
 
-                        if(pokedexNbr-1 != 0){
-                            fetch(`/api/pokedex?pokemon_number=${pokedexNbr-1}`)
+                        let currentPokedexNbr = parseInt(pokedexNbr);
+
+                        if(currentPokedexNbr - 1 != 0){
+                            fetch(`/api/pokedex?pokemon_number=${currentPokedexNbr - 1}`)
                                 .then(response => {
                                     if(!response.ok) {
                                         throw new Error('Pokemon not found');
@@ -50,13 +52,13 @@
                                     let pokemon = data[0];
                                     const previous_pokemon = document.getElementById("previous_pokemon");
                                     previous_pokemon.innerText = `<< ${pokemon.name}`;
-                                    previous_pokemon.href = `/pokemon?pokemon_number=${pokedexNbr - 1}`
+                                    previous_pokemon.href = `/pokemon?pokemon_number=${currentPokedexNbr - 1}`
                                 })
                             
                         }
                         
-                        if (pokedexNbr+1 <= 1025){
-                            fetch(`/api/pokedex?pokemon_number=${pokedexNbr+1}`)
+                        if (currentPokedexNbr + 1 <= 1025){
+                            fetch(`/api/pokedex?pokemon_number=${currentPokedexNbr + 1}`)
                                 .then(response => {
                                     if(!response.ok) {
                                         throw new Error('Pokemon not found');
@@ -67,7 +69,7 @@
                                     let pokemon = data[0];
                                     const next_pokemon = document.getElementById("next_pokemon");
                                     next_pokemon.innerText = `${pokemon.name} >>`;
-                                    next_pokemon.href = `/pokemon?pokemon_number=${pokedexNbr + 1}`
+                                    next_pokemon.href = `/pokemon?pokemon_number=${currentPokedexNbr + 1}`
                                 })
                         }
                         
