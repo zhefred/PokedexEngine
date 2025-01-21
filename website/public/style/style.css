@@ -2,3 +2,14 @@ body{
     background-color: black;
     color: white;
 }
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 55px;
+}

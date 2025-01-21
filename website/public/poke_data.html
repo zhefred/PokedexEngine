@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+</head>
+<body>
+    <table style="border: none; margin-left: auto; margin-right: auto;">
+        <tr>
+            <td><a id="previous_pokemon"></a></td>
+            <td><a id="dex" href="/pokedex">Return to dex</a></td>
+            <td><a id="next_pokemon"></a></td>
+        </tr>
+    </table>
+    <h1 id = "pokemonName" style="text-align: center"></h1>
+    <img id = "pokeSprite" src = "../static/images/sub.png"  style = "display: block; margin: auto;"/>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const pokedexNbr = params.get('pokemon_number');
+        
+        if (pokedexNbr) {
+            fetch(`/api/pokedex?pokemon_number=${pokedexNbr}`)
+                .then(response => {
+                    if(!response.ok) {
+                        throw new Error('Pokemon not found');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.length > 0) {
+                        let pokemon = data[0];
+                        document.title = `${pokemon.name}`;
+                        const pokemonName = document.getElementById("pokemonName");
+                        const pokeSprite = document.getElementById("pokeSprite");
+
+                        pokemonName.innerHTML = pokemon.name;
+
+                        pokeSprite.src = `../static/images/official-artwork/${pokedexNbr}.png`;
+
+                        if(pokedexNbr-1 != 0){
+                            fetch(`/api/pokedex?pokemon_number=${pokedexNbr-1}`)
+                                .then(response => {
+                                    if(!response.ok) {
+                                        throw new Error('Pokemon not found');
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    let pokemon = data[0];
+                                    const previous_pokemon = document.getElementById("previous_pokemon");
+                                    previous_pokemon.innerText = `<< ${pokemon.name}`;
+                                    previous_pokemon.href = `/pokemon?pokemon_number=${pokedexNbr - 1}`
+                                })
+                            
+                        }
+                        
+                        if (pokedexNbr+1 <= 1025){
+                            fetch(`/api/pokedex?pokemon_number=${pokedexNbr+1}`)
+                                .then(response => {
+                                    if(!response.ok) {
+                                        throw new Error('Pokemon not found');
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    let pokemon = data[0];
+                                    const next_pokemon = document.getElementById("next_pokemon");
+                                    next_pokemon.innerText = `${pokemon.name} >>`;
+                                    next_pokemon.href = `/pokemon?pokemon_number=${pokedexNbr + 1}`
+                                })
+                        }
+                        
+                    } else {
+                        throw new Error('No data found');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error.message);
+                    document.title = 'Pokemon Not Found';
+                });
+        } else {
+            document.title = 'No Pokemon Selected';
+        }
+    </script>
+</body>
+</html>

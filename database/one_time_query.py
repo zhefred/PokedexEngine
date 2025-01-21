@@ -4,17 +4,22 @@ from sqlite3 import Error
 
 
 create_pokemons_table = """
-CREATE TABLE IF NOT EXISTS pokemon(
+CREATE TABLE IF NOT EXISTS pokedex(
+    gen INTEGER NOT NULL,
     pokedex_nbr INTEGER PRIMARY KEY,
     price INTEGER,
     name TEXT NOT NULL,
-    type1 TEXT NOT NULL,
-    type2 TEXT,
+    type TEXT[],
     height DOUBLE NOT NULL,
     weight DOUBLE,
-    ability1 TEXT NOT NULL,
-    ability2 TEXT,
-    hidden_ability TEXT
+    abilities TEXT[],
+    gender_rate DOUBLE[],
+    catch_rate INTEGER NOT NULL,
+    leveling_rate TEXT NOT NULL,
+    base_friendship INTEGER NOT NULL,
+    base_exp_yield INTEGER NOT NULL,
+    ev_yield INTEGER[],
+    stats INTEGER[]    
 );
 """
 #The number of evos include the stage we are at
@@ -84,6 +89,7 @@ create_effectiveness_table = """
 path_parsed_file = "./pokedata/parsed_name_file.txt"
 path_saved_file = "./pokedata/saved_name_file.txt"
 path_raw_file = "./pokedata/raw_name_file.txt"
+path_db = r"C:\Users\frede\Documents\Pi-kémon\website\pokeDb.sqlite"
 
 def fill_pokemon_list():
     path = path_parsed_file.replace("name", "pokemons")
@@ -157,12 +163,10 @@ def create_connection(path):
     try:
         connection = sqlite3.connect(path)
         print("Connection to SQLite DB successful")
+        return connection
     except Error as e:
         print(f"The error '{e}' occured")
-    
-    return connection
-
-connection = create_connection("./dumbController/pokeDb.sqlite")
+        return None
 
 def execute_query(connection, query, success_message="", params=()):
     cursor = connection.cursor()
@@ -174,7 +178,7 @@ def execute_query(connection, query, success_message="", params=()):
     except Error as e:
         print(f"The error '{e}' occured")
 
-def create_query():
+def create_query(connection):
     ans = input("\n========CREATE========\n1 -> Create table Pokémon\n2 -> Create table Move\n3 -> Create table Team\n4 -> Create table Pokédex\n5 -> Create table effectiveness\n6 -> Create all tables\n0 -> Go back\n\n")
 
     if(ans == "1"):
@@ -236,10 +240,26 @@ def insert_query():
 def update_query():
     return ""
     
-def delete_query():
-    return ""
+def delete_query(connection):
+    ans = input("\n========DELETE========\n1 -> Delete table Pokémon\n2 -> Delete table Move\n3 -> Delete table Team\n4 -> Delete table Pokédex\n5 -> Delete table effectiveness\n0 -> Go back\n\n")
+
+    query = "DROP TABLE ";
+
+    if(ans == "1"):
+        query += ("pokemon;")
+    elif (ans == "2"):
+        query.append("move;")
+    elif (ans == "3"):
+        query.append("team;")
+    elif (ans == "4"):
+        query.append("pokedex;")
+    elif (ans == "5"):
+        query.append("effectiveness;")
+    else :
+        return 
 
 def main():
+    connection = create_connection(path_db)
     prompt = "\nWhat do you want to do?\n\n1 -> Create\n2 -> Insert data\n3 -> Update\n4 -> Delete\n0 -> Quit\n\n"
 
     ans = input(prompt)
@@ -248,13 +268,13 @@ def main():
 
     while(ans != "0"):
         if(ans == "1"):
-            query_to_execute = create_query()
+            query_to_execute = create_query(connection)
         elif(ans == "2"):
             query_to_execute = insert_query()
         elif(ans == "3"):
             query_to_execute = update_query()
         elif(ans == "4"):
-            query_to_execute = delete_query()
+            query_to_execute = delete_query(connection)
 
         if(query_to_execute != ""):
             execute_query(connection, query_to_execute)
