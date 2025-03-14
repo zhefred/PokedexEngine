@@ -39,22 +39,32 @@ app.get('/playnow', (req, res) => {
 });
 
 app.get('/api/pokedex', (req, res) => {
-    const pokemon_nbr = req.query.pokemon_number;
+    const request_type = req.query.req_type;
+    const infos = req.query.info;
 
-    if(pokemon_nbr) {
-        db.all('SELECT * FROM pokedex WHERE pokedex_nbr = ?', [pokemon_nbr], (err,rows) => {
-            if (err) {
-                return res.status(500).json({ error: err.message });
-            }
+    if(request_type == "pkdx") {
+        if(infos){    
+            db.all('SELECT * FROM pokedex WHERE pokedex_nbr = ?', [infos], (err,rows) => {
+                if (err) {
+                    return res.status(500).json({ error: err.message });
+                }
 
-            if (rows.length > 0) {
+                if (rows.length > 0) {
+                    res.json(rows);
+                } else {
+                    res.status(404).json({ error: "Pokemon not found" });
+                }
+            });
+        } else {
+            db.all('SELECT * FROM pokedex', [], (err, rows) => {
+                if (err) {
+                    return res.status(500).json({ error: err.message });
+                }
                 res.json(rows);
-            } else {
-                res.status(404).json({ error: "Pokemon not found" });
-            }
-        });
-    } else {
-        db.all('SELECT * FROM pokedex', [], (err, rows) => {
+            });
+        }
+    } else if (request_type == "type") {
+        db.all('SELECT * FROM types WHERE id = ?', [infos], (err,rows) => {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }

@@ -21,7 +21,7 @@
         
         //checkbox.addEventListener('change', () => {
         //if(selectedPokedex)
-        fetch('/api/pokedex')
+        fetch('/api/pokedex?req_type=pkdx')
             .then(response => response.json())
             .then(data => {
                 const pokedexList = document.getElementById('pokedex');

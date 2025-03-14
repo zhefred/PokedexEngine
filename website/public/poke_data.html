@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="40">
     <title>Loading...</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon_substitute.png">
     <script src="https://kit.fontawesome.com/19b0074f79.js" crossorigin="anonymous"></script>
     <style>
         table, th, td {
-            border: 1px, solid, black;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a{
+            display: flex; 
+            align-items: center;
+            gap: 8px; 
+            font-size: 25px; 
+            height: 50px; 
+            text-decoration: none;
+            color: #000000;
         }
         
         .bar {
@@ -25,7 +37,9 @@
         .sp-def {background-color: #4f85c7;}
         .spd {background-color: #f06d8d;}
 
-        #fourthRow td {
+        
+
+        #fifthRow td {
             width: 16.66%;
             text-align: center;
         }
@@ -43,49 +57,72 @@
     </style>
 </head>
 <body>
-    <table style="margin-left: auto; margin-right: auto;">
+    <table style="margin-left: auto; margin-right: auto;width: 100%;">
         <tr>
-            <td><a id="previous_pokemon" style="text-align: left;"></a></td>
-            <td><a id="dex" href="/pokedex" style="text-align: center;">Return to dex</a></td>
-            <td><a id="next_pokemon" style="text-align: right;"></a></td>
+            <td style="text-align: left; width: 40%;">
+                <a id="previous_pokemon" style="margin-left: 20px; "></a>
+            </td>
+            <td style="width: 20%;">
+                <a id="dex" style="justify-content: center;" href="/pokedex">Return to dex</a>
+            </td>
+            <td style="text-align: right; width: 40%;">
+                <a id="next_pokemon" style="justify-content: flex-end; margin-right: 20px;"></a>
+            </td>
         </tr>
     </table>
 
-    <table style="width: 100%; max-width: 1030px;">
+    <table>
         <tr id="firstRow">
-            <td id="pokemonNumber"></td>
-            <td id="pokemonName"></td>
-            <td id="pokemonType"></td>
+            <td colspan="2">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <div id="pokemonNumber" style="width: 25%;"></div>
+                    <div id="pokemonName" style="width: 75%;"></div>
+                </div>
+            </td>
             <td colspan="6" style="text-align: center;">Base stats</td>
         </tr>
         
         <tr id="secondRow">
-            <td id="pokemonImage" colspan="3" rowspan="4">
-                <img id = "pokeSprite" src = "../static/images/sub.png"  style = "display: block; margin: auto;" width="300px"/>
+            <td colspan="2">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <div id="pokemonType1" style="width: 50%; text-align: center;">
+                        <img src="../static/images/types/0.png" height="30px">
+                    </div>
+                    <div id="pokemonType2" style="width: 50%; text-align: center;">
+                        <img src="../static/images/types/0.png" height="30px">
+                    </div>
+                </div>
             </td>
-            <td id="pokemonStats" colspan="6"></td>
+            <td id="pokeStats" colspan="6" rowspan="2">
+                <table id="pokemonStats" width="100%" height="100%"></table>
+            </td>
         </tr>
 
         <tr id="thirdRow">
-            <td id="pokemonEVYieldTitle" colspan="6" style="text-align: center;">EV Yield</td>
-        </tr>
-
-        <tr id="fourthRow">
-
-        </tr>
-
-        <tr id="fifthRow">
-        </tr>
-
-        <tr id="sixthRow">
-            <td id="height" style="font-size: 35px;" colspan="2">
-                <i class="fa-solid fa-ruler"></i> 0m
-            </td>
-            <td id="weight" style="font-size: 35px;" colspan="1">
-                <i class="fa-solid fa-weight-hanging"></i> 0kg
+            <td id="pokemonImage" colspan="2" rowspan="3" style="text-align: center;">
+                <img id = "pokeSprite" src = "../static/images/sub.png" width="300px"/>
             </td>
             
         </tr>
+
+        <tr id="fourthRow">
+            <td id="pokemonEVYieldTitle" colspan="6" style="text-align: center;">EV Yield</td>
+        </tr>
+
+        <tr id="fifthRow">
+            
+            
+        </tr>
+
+        <tr id="sixthRow">
+            <td id="height" style="font-size: 35px;">
+                <i class="fa-solid fa-ruler"></i> 0m
+            </td>
+            <td id="weight" style="font-size: 35px;">
+                <i class="fa-solid fa-weight-hanging"></i> 0kg
+            </td>
+        </tr>
+
     </table>
 
     <script>
@@ -93,7 +130,7 @@
         const pokedexNbr = params.get('pokemon_number');
         
         if (pokedexNbr) {
-            fetch(`/api/pokedex?pokemon_number=${pokedexNbr}`)
+            fetch(`/api/pokedex?req_type=pkdx&info=${pokedexNbr}`)
                 .then(response => {
                     if(!response.ok) {
                         throw new Error('Pokemon not found');
@@ -104,41 +141,50 @@
                     if (data.length > 0) {
                         let pokemon = data[0];
                         document.title = `${pokemon.name}`;
+                        
+                        const previous_pokemon = document.getElementById("previous_pokemon");
+                        const next_pokemon = document.getElementById("next_pokemon");
+                        
                         const pokemonNumber = document.getElementById("pokemonNumber");
                         const pokemonName = document.getElementById("pokemonName");
-                        const pokemonType = document.getElementById("pokemonType")
+                        const pokemonType1 = document.getElementById("pokemonType1");
+                        const pokemonType2 = document.getElementById("pokemonType2");
                         const pokeSprite = document.getElementById("pokeSprite");
                         const pokemonStats = document.getElementById("pokemonStats");
                         const pokemonHeight = document.getElementById("height");
                         const pokemonWeight = document.getElementById("weight");
-                        const pokemonEVYields = document.getElementById("fourthRow");
-                        const pokemonEVYieldFields = document.getElementById("fifthRow");
+                        const pokemonEVYields = document.getElementById("fifthRow");
+                        const pokemonEVYieldFields = document.getElementById("sixthRow");
 
                         pokemonNumber.innerHTML = pokedexNbr;
                         pokemonName.innerHTML = pokemon.name;
+
+                        pokemonNumber.style.fontSize = "18px";
+                        pokemonName.style.fontSize = "18px";
+
                         
                         let types = JSON.parse(pokemon.type);
-                        pokemonType.innerHTML = types.type1;
- 
-                        if(types.type2 != "") {
-                            const firstRow = document.getElementById("firstRow");
-                            const secondType = document.createElement("td");
-                            secondType.setAttribute("id", "secondType");
-                            secondType.innerHTML = types.type2;
-                            
-                            firstRow.insertBefore(secondType, firstRow.children[firstRow.children.length-1]);
 
-                            const pokemonImage = document.getElementById("pokemonImage");
-                            pokemonImage.setAttribute("colspan", "4");
-                            pokemonWeight.setAttribute("colspan", "2");
+                        console.log(types);
+
+                        pokemonType1.childNodes[1].src = `../static/images/types/${types.type1}.png`;
+                        console.log(pokemonType1.childNodes);
+                        
+                        if(types.type2){
+                            pokemonType2.childNodes[1].src = `../static/images/types/${types.type2}.png`;
+                        } else {
+                            pokemonType2.remove();
                         }
 
-                        pokeSprite.src = `../static/images/official-artwork/${pokedexNbr}.png`;;
+
+                        pokeSprite.src = `../static/images/official-artwork/${pokedexNbr}.png`;
 
                         let currentPokedexNbr = parseInt(pokedexNbr);
 
+                        const spriteHeight = "30";
+                        const spriteWidth = "40";
                         if(currentPokedexNbr - 1 != 0){
-                            fetch(`/api/pokedex?pokemon_number=${currentPokedexNbr - 1}`)
+                            fetch(`/api/pokedex?req_type=pkdx&info=${currentPokedexNbr - 1}`)
                                 .then(response => {
                                     if(!response.ok) {
                                         throw new Error('Pokemon not found');
@@ -147,15 +193,29 @@
                                 })
                                 .then(data => {
                                     let pokemon = data[0];
-                                    const previous_pokemon = document.getElementById("previous_pokemon");
-                                    previous_pokemon.innerText = `<< ${pokemon.name}`;
+                                    previous_pokemon.innerText = ` ${pokemon.name}`;
+
+                                    const arrow_left = document.createElement("i");
+                                    arrow_left.className = "fa-solid fa-angle-left";
+                                    arrow_left.height = "100%";
+                                    previous_pokemon.prepend(arrow_left);
+
+                                    
+                                    const sprite_prev = document.createElement("canvas");
+                                    const id = "spriteCanvasPrev"
+                                    sprite_prev.setAttribute("id", id);
+                                    sprite_prev.height = spriteHeight;
+                                    sprite_prev.width =spriteWidth;
+                                    sprite_prev.style.transform = 'scaleX(-1)';
+                                    previous_pokemon.appendChild(sprite_prev);
                                     previous_pokemon.href = `/pokemon?pokemon_number=${currentPokedexNbr - 1}`
+                                    drawSprite(sprite_prev.width, sprite_prev.height, ((currentPokedexNbr-1)%12) * spriteWidth, Math.floor((currentPokedexNbr-1)/12)*spriteHeight, id);
                                 })
                             
                         }
                         
                         if (currentPokedexNbr + 1 <= 1025){
-                            fetch(`/api/pokedex?pokemon_number=${currentPokedexNbr + 1}`)
+                            fetch(`/api/pokedex?req_type=pkdx&info=${currentPokedexNbr + 1}`)
                                 .then(response => {
                                     if(!response.ok) {
                                         throw new Error('Pokemon not found');
@@ -164,9 +224,20 @@
                                 })
                                 .then(data => {
                                     let pokemon = data[0];
-                                    const next_pokemon = document.getElementById("next_pokemon");
-                                    next_pokemon.innerText = `${pokemon.name} >>`;
+                                    next_pokemon.innerText = `${pokemon.name} `;
+                                    const arrow_right = document.createElement("i");
+                                    arrow_right.className = "fa-solid fa-angle-right";
+                                    arrow_right.height = "100%";
+                                    next_pokemon.appendChild(arrow_right);
+                                    
+                                    const sprite_next = document.createElement("canvas");
+                                    const id = "spriteCanvasNext";
+                                    sprite_next.setAttribute("id", id)
+                                    sprite_next.height = spriteHeight;
+                                    sprite_next.width = spriteWidth;
+                                    next_pokemon.prepend(sprite_next);
                                     next_pokemon.href = `/pokemon?pokemon_number=${currentPokedexNbr + 1}`
+                                    drawSprite(sprite_next.width, sprite_next.height, ((currentPokedexNbr+1)%12) * spriteWidth, Math.floor((currentPokedexNbr+1)/12)*spriteHeight, id)
                                 })
                         }
                         
@@ -179,12 +250,13 @@
 
                             const statNameCell = document.createElement("td");
                             statNameCell.textContent = stat.name;
-                            statNameCell.style.width = "100px";
+                            statNameCell.style.width = "10%";
                             row.appendChild(statNameCell);
 
                             const valueCell = document.createElement("td");
                             valueCell.textContent = stat.value;
-                            valueCell.style.width = "50px";
+                            valueCell.style.width = "10%";
+                            valueCell.style.textAlign = "center";
                             row.appendChild(valueCell);
 
                             const barCell = document.createElement("td");
@@ -223,20 +295,23 @@
                         yields.forEach(yield => {
                             const yieldName = document.createElement("td");
                             yieldName.innerHTML = yield.name;
+                            yieldName.style.fontSize = "20px";
                             pokemonEVYields.appendChild(yieldName);
 
                             const yieldValue = document.createElement("td");
                             yieldValue.innerHTML = yield.yield;
                             yieldValue.className = yield.colorclass;
                             yieldValue.setAttribute("style", "text-align: center");
+                            yieldValue.style.fontSize ="25px";
+                            yieldValue.setAttribute("rowspan","2");
                             pokemonEVYieldFields.appendChild(yieldValue);
                         });
 
+                        const pokeHeight = (pokemon.height).toFixed(1);
+                        const pokeWeight = (pokemon.weight).toFixed(1);
 
-                        
-
-                        pokemonHeight.innerHTML = pokemonHeight.innerHTML.replace(0, pokemon.height);
-                        pokemonWeight.innerHTML = pokemonWeight.innerHTML.replace(0, pokemon.weight);
+                        pokemonHeight.innerHTML = pokemonHeight.innerHTML.replace(0,pokeHeight);
+                        pokemonWeight.innerHTML = pokemonWeight.innerHTML.replace(0, pokeWeight);
 
                     } else {
                         throw new Error('No data found');
@@ -249,6 +324,38 @@
         } else {
             document.title = 'No Pokemon Selected';
         }
+    </script>
+
+    <script>
+        const spriteSheet = new Image();
+        spriteSheet.src = '../static/images/icons.png'
+
+        spriteSheet.onload = () =>{
+            window.spriteReady = true;
+        }
+        
+        function drawSprite(spriteWidth, spriteHeight, spriteX, spriteY, id) {
+            if(!window.spriteReady){
+                spriteSheet.onload = () => drawSprite(spriteWidth, spriteHeight, spriteX, spriteY, id);
+                return;
+            }
+
+            const canvas = document.getElementById(id);
+            const ctx = canvas.getContext('2d');
+
+            if(!canvas){
+                console.error(`Canvas with ID '${id}' not found.`);
+                return;
+            }
+
+            ctx.drawImage(
+                spriteSheet,
+                spriteX, spriteY,
+                spriteWidth, spriteHeight,
+                0, 0,
+                spriteWidth, spriteHeight
+            );
+        };
     </script>
 </body>
 </html>
