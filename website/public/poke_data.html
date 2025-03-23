@@ -160,7 +160,16 @@
                         pokemonName.innerHTML = pokemon.name;
 
                         pokemonNumber.style.fontSize = "18px";
+                        pokemonNumber.style.textAlign = "center";
+                        pokemonNumber.style.width = "25%";
+                        
                         pokemonName.style.fontSize = "18px";
+                        pokemonName.style.textAlign = "center";
+                        pokemonName.style.width = "75%";
+
+                        pokemonType1.style.width = "75px";
+                        pokemonType1.style.textAlign = "center";
+                        pokemonType1.querySelector('img').width = 75;
 
                         
                         let types = JSON.parse(pokemon.type);
@@ -171,6 +180,9 @@
                         console.log(pokemonType1.childNodes);
                         
                         if(types.type2){
+                            pokemonType2.style.width = "75px";
+                            pokemonType2.style.textAlign = "center";
+                            pokemonType2.querySelector('img').width = 75;
                             pokemonType2.childNodes[1].src = `../static/images/types/${types.type2}.png`;
                         } else {
                             pokemonType2.remove();
