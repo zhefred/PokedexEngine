@@ -26,8 +26,8 @@ OR pokedex_nbr = 194 OR pokedex_nbr = 266 OR pokedex_nbr = 268 OR pokedex_nbr = 
 OR pokedex_nbr = 506 OR pokedex_nbr = 524 OR pokedex_nbr = 532 OR pokedex_nbr = 746
 OR pokedex_nbr = 824;
 
-UPDATE pokedex SET stats = json_set(stats, '#[3].value', 27) WHERE
-pokedex_nbr = 664 OR pokedex_nbr = 665
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 27) WHERE
+pokedex_nbr = 664 OR pokedex_nbr = 665;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 29) WHERE
 pokedex_nbr = 412 OR pokedex_nbr = 789 OR pokedex_nbr = 790 OR pokedex_nbr = 917;
@@ -50,8 +50,8 @@ UPDATE pokedex SET stats = json_set(stats, '$[3].value', 32) WHERE
 pokedex_nbr = 659 OR pokedex_nbr = 712;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 33) WHERE
-pokedex_nbr = 202 OR pokedex_nbr = 821;
-403 OR pokedex_nbr = 425;
+pokedex_nbr = 202 OR pokedex_nbr = 821
+OR pokedex_nbr = 403 OR pokedex_nbr = 425;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 35) WHERE
 pokedex_nbr = 16 OR pokedex_nbr = 50 OR pokedex_nbr = 56 OR pokedex_nbr = 66 
@@ -330,201 +330,209 @@ pokedex_nbr = 154 OR pokedex_nbr = 354 OR pokedex_nbr = 502 OR pokedex_nbr = 565
 OR pokedex_nbr = 657 OR pokedex_nbr = 678 OR pokedex_nbr = 705;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 85) WHERE
-pokedex_nbr = 198 OR pokedex_nbr = 200 OR pokedex_nbr = 234 OR pokedex_nbr = 238 
-OR pokedex_nbr = 253 OR pokedex_nbr = 256 OR pokedex_nbr = 260 OR pokedex_nbr = 311
-OR pokedex_nbr = 324 OR pokedex_nbr = 331 OR pokedex_nbr = 419 OR pokedex_nbr = 537
+pokedex_nbr = 9 OR pokedex_nbr = 34 OR pokedex_nbr = 40 OR pokedex_nbr = 44
+OR pokedex_nbr = 70 OR pokedex_nbr = 91 OR pokedex_nbr = 110 OR pokedex_nbr = 131
+OR pokedex_nbr = 137 OR pokedex_nbr = 198 OR pokedex_nbr = 200 OR pokedex_nbr = 234 
+OR pokedex_nbr = 238 OR pokedex_nbr = 253 OR pokedex_nbr = 256 OR pokedex_nbr = 260 
+OR pokedex_nbr = 311 OR pokedex_nbr = 324 OR pokedex_nbr = 331 OR pokedex_nbr = 419 
+OR pokedex_nbr = 537
 OR pokedex_nbr = 591 OR pokedex_nbr = 593 OR pokedex_nbr = 605 OR pokedex_nbr = 685
-OR pokedex_nbr = 787 OR pokedex_nbr = 845 OR pokedex_nbr = 914 OR pokedex_nbr = 967;
+OR pokedex_nbr = 787 OR pokedex_nbr = 845 OR pokedex_nbr = 914 OR pokedex_nbr = 967
+OR pokedex_nbr = 982 OR pokedex_nbr = 988 OR pokedex_nbr = 1007;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 86) WHERE
-pokedex_nbr = 436 OR pokedex_nbr = 469 OR pokedex_nbr = 531 OR pokedex_nbr = 685
-OR pokedex_nbr = 993;
+pokedex_nbr = 164 OR pokedex_nbr = 454 OR pokedex_nbr = 781 OR pokedex_nbr = 857;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 87) WHERE
-pokedex_nbr = 31;
+pokedex_nbr = 421 OR pokedex_nbr = 581 OR pokedex_nbr = 828;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 88) WHERE
-pokedex_nbr = 395 OR pokedex_nbr = 687 OR pokedex_nbr = 693 OR pokedex_nbr = 1010;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 89) WHERE
-pokedex_nbr = 545 OR pokedex_nbr = 792;
+pokedex_nbr = 510 OR pokedex_nbr = 1025;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 90) WHERE
-pokedex_nbr = 98 OR pokedex_nbr = 140 OR pokedex_nbr = 146 OR pokedex_nbr = 150
-OR pokedex_nbr = 204 OR pokedex_nbr = 233 OR pokedex_nbr = 250 OR pokedex_nbr = 260
-OR pokedex_nbr = 290 OR pokedex_nbr = 334 OR pokedex_nbr = 355 OR pokedex_nbr = 365
-OR pokedex_nbr = 380 OR pokedex_nbr = 382 OR pokedex_nbr = 384 OR pokedex_nbr = 451
-OR pokedex_nbr = 491 OR pokedex_nbr = 508 OR pokedex_nbr = 541 OR pokedex_nbr = 609
-OR pokedex_nbr = 612 OR pokedex_nbr = 621 OR pokedex_nbr = 635 OR pokedex_nbr = 639
-OR pokedex_nbr = 645 OR pokedex_nbr = 646 OR pokedex_nbr = 647 OR pokedex_nbr = 691
-OR pokedex_nbr = 727 OR pokedex_nbr = 738 OR pokedex_nbr = 754 OR pokedex_nbr = 764
-OR pokedex_nbr = 766 OR pokedex_nbr = 783 OR pokedex_nbr = 812 OR pokedex_nbr = 830
-OR pokedex_nbr = 834 OR pokedex_nbr = 838 OR pokedex_nbr = 853 OR pokedex_nbr = 880
-OR pokedex_nbr = 881 OR pokedex_nbr = 930 OR pokedex_nbr = 943 OR pokedex_nbr = 966
-OR pokedex_nbr = 970 OR pokedex_nbr = 1006;
+pokedex_nbr = 12 OR pokedex_nbr = 26 OR pokedex_nbr = 49 OR pokedex_nbr = 138
+OR pokedex_nbr = 182 OR pokedex_nbr = 186 OR pokedex_nbr = 203 OR pokedex_nbr = 219
+OR pokedex_nbr = 244 OR pokedex_nbr = 245 OR pokedex_nbr = 249 OR pokedex_nbr = 272
+OR pokedex_nbr = 275 OR pokedex_nbr = 321 OR pokedex_nbr = 326 OR pokedex_nbr = 342 
+OR pokedex_nbr = 426 OR pokedex_nbr = 455 OR pokedex_nbr = 638 OR pokedex_nbr = 640
+OR pokedex_nbr = 654 OR pokedex_nbr = 666 OR pokedex_nbr = 756 OR pokedex_nbr = 765
+OR pokedex_nbr = 802 OR pokedex_nbr = 836 OR pokedex_nbr = 851 OR pokedex_nbr = 881
+OR pokedex_nbr = 910 OR pokedex_nbr = 1002;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 91) WHERE
-pokedex_nbr = 597 OR pokedex_nbr = 707 OR pokedex_nbr = 939 OR pokedex_nbr = 1009
-OR pokedex_nbr = 1021;
+pokedex_nbr = 295 OR pokedex_nbr = 729 OR pokedex_nbr = 776 OR pokedex_nbr = 871;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 92) WHERE
-pokedex_nbr = 752 OR pokedex_nbr = 918 OR pokedex_nbr = 998;
+pokedex_nbr = 423 OR pokedex_nbr = 441 OR pokedex_nbr = 442 OR pokedex_nbr = 460;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 94) WHERE
+pokedex_nbr = 367 OR pokedex_nbr = 414;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 95) WHERE
-pokedex_nbr = 62 OR pokedex_nbr = 82 OR pokedex_nbr = 104 OR pokedex_nbr = 109
-OR pokedex_nbr = 111 OR pokedex_nbr = 117 OR pokedex_nbr = 128 OR pokedex_nbr = 149
-OR pokedex_nbr = 182 OR pokedex_nbr = 222 OR pokedex_nbr = 230 OR pokedex_nbr = 237
-OR pokedex_nbr = 438 OR pokedex_nbr = 445 OR pokedex_nbr = 463 OR pokedex_nbr = 468
-OR pokedex_nbr = 497 OR pokedex_nbr = 534 OR pokedex_nbr = 576 OR pokedex_nbr = 600
-OR pokedex_nbr = 626 OR pokedex_nbr = 649 OR pokedex_nbr = 651 OR pokedex_nbr = 716
-OR pokedex_nbr = 717 OR pokedex_nbr = 737 OR pokedex_nbr = 772 OR pokedex_nbr = 773
-OR pokedex_nbr = 820 OR pokedex_nbr = 858 OR pokedex_nbr = 865 OR pokedex_nbr = 871
-OR pokedex_nbr = 890 OR pokedex_nbr = 900 OR pokedex_nbr = 904 OR pokedex_nbr = 1000;
+pokedex_nbr = 36 OR pokedex_nbr = 55 OR pokedex_nbr = 81 OR pokedex_nbr = 117
+OR pokedex_nbr = 125 OR pokedex_nbr = 136 OR pokedex_nbr = 144 OR pokedex_nbr = 178
+OR pokedex_nbr = 230 OR pokedex_nbr = 248 OR pokedex_nbr = 279 OR pokedex_nbr = 289
+OR pokedex_nbr = 319 OR pokedex_nbr = 337 OR pokedex_nbr = 358 OR pokedex_nbr = 365
+OR pokedex_nbr = 376 OR pokedex_nbr = 405 OR pokedex_nbr = 466 OR pokedex_nbr = 479
+OR pokedex_nbr = 563 OR pokedex_nbr = 576 OR pokedex_nbr = 608 OR pokedex_nbr = 615
+OR pokedex_nbr = 620 OR pokedex_nbr = 743 OR pokedex_nbr = 772 OR pokedex_nbr = 773
+OR pokedex_nbr = 785 OR pokedex_nbr = 788 OR pokedex_nbr = 817 OR pokedex_nbr = 841
+OR pokedex_nbr = 861 OR pokedex_nbr = 1001 OR pokedex_nbr = 1011;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 97) WHERE
-pokedex_nbr = 346 OR pokedex_nbr = 989;
+pokedex_nbr = 596 OR pokedex_nbr = 673 OR pokedex_nbr = 691 OR pokedex_nbr = 715
+OR pokedex_nbr = 799;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 98) WHERE
-pokedex_nbr = 763;
+pokedex_nbr = 512 OR pokedex_nbr = 514 OR pokedex_nbr = 516 OR pokedex_nbr = 741;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 99) WHERE
-pokedex_nbr = 544 OR pokedex_nbr = 985 OR pokedex_nbr = 986;
+pokedex_nbr = 683 OR pokedex_nbr = 699;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 100) WHERE
-pokedex_nbr = 9 OR pokedex_nbr = 74 OR pokedex_nbr = 90 OR pokedex_nbr = 127
-OR pokedex_nbr = 138 OR pokedex_nbr = 144 OR pokedex_nbr = 151 OR pokedex_nbr = 154
-OR pokedex_nbr = 160 OR pokedex_nbr = 212 OR pokedex_nbr = 251 OR pokedex_nbr = 279
-OR pokedex_nbr = 289 OR pokedex_nbr = 304 OR pokedex_nbr = 348 OR pokedex_nbr = 372
-OR pokedex_nbr = 375 OR pokedex_nbr = 378 OR pokedex_nbr = 385 OR pokedex_nbr = 484
-OR pokedex_nbr = 490 OR pokedex_nbr = 492 OR pokedex_nbr = 494 OR pokedex_nbr = 625
-OR pokedex_nbr = 643 OR pokedex_nbr = 679 OR pokedex_nbr = 750 OR pokedex_nbr = 774
-OR pokedex_nbr = 781 OR pokedex_nbr = 832 OR pokedex_nbr = 863 OR pokedex_nbr = 870
-OR pokedex_nbr = 882 OR pokedex_nbr = 883 OR pokedex_nbr = 892 OR pokedex_nbr = 911
-OR pokedex_nbr = 933 OR pokedex_nbr = 936 OR pokedex_nbr = 972 OR pokedex_nbr = 1001
-OR pokedex_nbr = 1008 OR pokedex_nbr = 1023;
+pokedex_nbr = 3 OR pokedex_nbr = 59 OR pokedex_nbr = 71 OR pokedex_nbr = 80
+OR pokedex_nbr = 92 OR pokedex_nbr = 114 OR pokedex_nbr = 121 OR pokedex_nbr = 122
+OR pokedex_nbr = 126 OR pokedex_nbr = 149 OR pokedex_nbr = 151 OR pokedex_nbr = 199
+OR pokedex_nbr = 251 OR pokedex_nbr = 267 OR pokedex_nbr = 284 OR pokedex_nbr = 315
+OR pokedex_nbr = 336 OR pokedex_nbr = 350 OR pokedex_nbr = 378 OR pokedex_nbr = 383
+OR pokedex_nbr = 385 OR pokedex_nbr = 487 OR pokedex_nbr = 490 OR pokedex_nbr = 492
+OR pokedex_nbr = 494 OR pokedex_nbr = 500 OR pokedex_nbr = 617 OR pokedex_nbr = 719
+OR pokedex_nbr = 724 OR pokedex_nbr = 770 OR pokedex_nbr = 784 OR pokedex_nbr = 842
+OR pokedex_nbr = 887 OR pokedex_nbr = 894 OR pokedex_nbr = 895;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 101) WHERE
-pokedex_nbr = 800 OR pokedex_nbr = 862;
+pokedex_nbr = 956;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 102) WHERE
-pokedex_nbr = 416;
+pokedex_nbr = 807;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 103) WHERE
-pokedex_nbr = 564 OR pokedex_nbr = 797;
+pokedex_nbr = 561 OR pokedex_nbr = 658 OR pokedex_nbr = 939;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 104) WHERE
+pokedex_nbr = 392;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 105) WHERE
-pokedex_nbr = 128 OR pokedex_nbr = 141 OR pokedex_nbr = 207 OR pokedex_nbr = 241
-OR pokedex_nbr = 344 OR pokedex_nbr = 367 OR pokedex_nbr = 368 OR pokedex_nbr = 389
-OR pokedex_nbr = 481 OR pokedex_nbr = 525 OR pokedex_nbr = 589 OR pokedex_nbr = 630 
-OR pokedex_nbr = 823 OR pokedex_nbr = 893 OR pokedex_nbr = 901;
+pokedex_nbr = 63 OR pokedex_nbr = 192 OR pokedex_nbr = 224 OR pokedex_nbr = 233
+OR pokedex_nbr = 254 OR pokedex_nbr = 310 OR pokedex_nbr = 323 OR pokedex_nbr = 429
+OR pokedex_nbr = 430 OR pokedex_nbr = 481 OR pokedex_nbr = 577 OR pokedex_nbr = 604
+OR pokedex_nbr = 631 OR pokedex_nbr = 876 OR pokedex_nbr = 899 OR pokedex_nbr = 941
+OR pokedex_nbr = 969;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 106) WHERE
-pokedex_nbr = 485 OR pokedex_nbr = 1013;
+pokedex_nbr = 556;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 107) WHERE
-pokedex_nbr = 479 OR pokedex_nbr = 791;
+pokedex_nbr = 518 OR pokedex_nbr = 797;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 108) WHERE
-pokedex_nbr = 442 OR pokedex_nbr = 992;
+pokedex_nbr = 503 OR pokedex_nbr = 952;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 109) WHERE
+pokedex_nbr = 6 OR pokedex_nbr = 157 OR pokedex_nbr = 668 OR pokedex_nbr = 695;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 110) WHERE
-pokedex_nbr = 28 OR pokedex_nbr = 80 OR pokedex_nbr = 105 OR pokedex_nbr = 197
-OR pokedex_nbr = 248 OR pokedex_nbr = 452 OR pokedex_nbr = 471 OR pokedex_nbr = 486
-OR pokedex_nbr = 488 OR pokedex_nbr = 770 OR pokedex_nbr = 826 OR pokedex_nbr = 875 
-OR pokedex_nbr = 995 OR pokedex_nbr = 1011 OR pokedex_nbr = 1019;
+pokedex_nbr = 45 OR pokedex_nbr = 134 OR pokedex_nbr = 135 OR pokedex_nbr = 229
+OR pokedex_nbr = 250 OR pokedex_nbr = 257 OR pokedex_nbr = 373 OR pokedex_nbr = 380
+OR pokedex_nbr = 465 OR pokedex_nbr = 549 OR pokedex_nbr = 584 OR pokedex_nbr = 700
+OR pokedex_nbr = 706 OR pokedex_nbr = 866 OR pokedex_nbr = 869 OR pokedex_nbr = 911
+OR pokedex_nbr = 981;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 111) WHERE
+pokedex_nbr = 395 OR pokedex_nbr = 758;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 112) WHERE
-pokedex_nbr = 632;
+pokedex_nbr = 567 OR pokedex_nbr = 671;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 113) WHERE
+pokedex_nbr = 791;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 114) WHERE
-pokedex_nbr = 991;
+pokedex_nbr = 368 OR pokedex_nbr = 655 OR pokedex_nbr = 849;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 115) WHERE
-pokedex_nbr = 75 OR pokedex_nbr = 99 OR pokedex_nbr = 114 OR pokedex_nbr = 185
-OR pokedex_nbr = 245 OR pokedex_nbr = 462 OR pokedex_nbr = 560 OR pokedex_nbr = 601
-OR pokedex_nbr = 689 OR pokedex_nbr = 787 OR pokedex_nbr = 788 OR pokedex_nbr = 801
-OR pokedex_nbr = 884 OR pokedex_nbr = 888 OR pokedex_nbr = 889 OR pokedex_nbr = 927
-OR pokedex_nbr = 950 OR pokedex_nbr = 977 OR pokedex_nbr = 1007 OR pokedex_nbr = 1014;
+pokedex_nbr = 93 OR pokedex_nbr = 124 OR pokedex_nbr = 139 OR pokedex_nbr = 181
+OR pokedex_nbr = 243 OR pokedex_nbr = 332 OR pokedex_nbr = 448 OR pokedex_nbr = 645
+OR pokedex_nbr = 954;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 116) WHERE
-pokedex_nbr = 437;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 118) WHERE
-pokedex_nbr = 410 OR pokedex_nbr = 450;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 119) WHERE
-pokedex_nbr = 697;
+pokedex_nbr = 469;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 120) WHERE
-pokedex_nbr = 110 OR pokedex_nbr = 112 OR pokedex_nbr = 219 OR pokedex_nbr = 232
-OR pokedex_nbr = 483 OR pokedex_nbr = 487 OR pokedex_nbr = 493 OR pokedex_nbr = 644
-OR pokedex_nbr = 721 OR pokedex_nbr = 839 OR pokedex_nbr = 983 OR pokedex_nbr = 990;
+pokedex_nbr = 64 OR pokedex_nbr = 82 OR pokedex_nbr = 493 OR pokedex_nbr = 571 
+OR pokedex_nbr = 644 OR pokedex_nbr = 649 OR pokedex_nbr = 693 OR pokedex_nbr = 884 
+OR pokedex_nbr = 978 OR pokedex_nbr = 1006 OR pokedex_nbr = 1019;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 121) WHERE
-pokedex_nbr = 718 OR pokedex_nbr = 1020;
+pokedex_nbr = 989 OR pokedex_nbr = 1013;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 122) WHERE
-pokedex_nbr = 652 OR pokedex_nbr = 711;
+pokedex_nbr = 993 OR pokedex_nbr = 1023;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 124) WHERE
+pokedex_nbr = 991;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 125) WHERE
-pokedex_nbr = 139 OR pokedex_nbr = 465 OR pokedex_nbr = 472 OR pokedex_nbr = 558
-OR pokedex_nbr = 784 OR pokedex_nbr = 844 OR pokedex_nbr = 1003;
+pokedex_nbr = 103 OR pokedex_nbr = 145 OR pokedex_nbr = 146 OR pokedex_nbr = 282
+OR pokedex_nbr = 407 OR pokedex_nbr = 467 OR pokedex_nbr = 482 OR pokedex_nbr = 578
+OR pokedex_nbr = 579 OR pokedex_nbr = 606 OR pokedex_nbr = 635 OR pokedex_nbr = 641
+OR pokedex_nbr = 642 OR pokedex_nbr = 818 OR pokedex_nbr = 873 OR pokedex_nbr = 930
+OR pokedex_nbr = 936 OR pokedex_nbr = 1009 OR pokedex_nbr = 1018;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 126) WHERE
+pokedex_nbr = 730;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 127) WHERE
+pokedex_nbr = 793 OR pokedex_nbr = 800 OR pokedex_nbr = 804;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 128) WHERE
+pokedex_nbr = 648;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 129) WHERE
-pokedex_nbr = 638;
+pokedex_nbr = 647;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 130) WHERE
-pokedex_nbr = 76 OR pokedex_nbr = 249 OR pokedex_nbr = 356 OR pokedex_nbr = 369
-OR pokedex_nbr = 376 OR pokedex_nbr = 464 OR pokedex_nbr = 470 OR pokedex_nbr = 480
-OR pokedex_nbr = 526 OR pokedex_nbr = 771 OR pokedex_nbr = 896 OR pokedex_nbr = 934
-OR pokedex_nbr = 1018;
+pokedex_nbr = 94 OR pokedex_nbr = 196 OR pokedex_nbr = 381 OR pokedex_nbr = 462
+OR pokedex_nbr = 471 OR pokedex_nbr = 485 OR pokedex_nbr = 646 OR pokedex_nbr = 721
+OR pokedex_nbr = 786 OR pokedex_nbr = 801 OR pokedex_nbr = 970 OR pokedex_nbr = 1015;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 131) WHERE
-pokedex_nbr = 598 OR pokedex_nbr = 790 OR pokedex_nbr = 798 OR pokedex_nbr = 984;
+pokedex_nbr = 716 OR pokedex_nbr = 717;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 133) WHERE
-pokedex_nbr = 565;
+pokedex_nbr = 1000;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 134) WHERE
+pokedex_nbr = 855;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 135) WHERE
-pokedex_nbr = 299 OR pokedex_nbr = 477 OR pokedex_nbr = 776 OR pokedex_nbr = 874;
+pokedex_nbr = 65 OR pokedex_nbr = 474 OR pokedex_nbr = 491 OR pokedex_nbr = 637
+OR pokedex_nbr = 780 OR pokedex_nbr = 905 OR pokedex_nbr = 987 OR pokedex_nbr = 1004
+OR pokedex_nbr = 1008;
 
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 139) WHERE 
-pokedex_nbr = 794;
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 136) WHERE
+pokedex_nbr = 858;
+
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 137) WHERE
+pokedex_nbr = 792 OR pokedex_nbr = 795 OR pokedex_nbr = 1021;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 140) WHERE
-pokedex_nbr = 205 OR pokedex_nbr = 227 OR pokedex_nbr = 305 OR pokedex_nbr = 324
-OR pokedex_nbr = 383 OR pokedex_nbr = 681 OR pokedex_nbr = 768;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 143) WHERE
-pokedex_nbr = 809;
+pokedex_nbr = 994;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 145) WHERE
-pokedex_nbr = 476 OR pokedex_nbr = 563 OR pokedex_nbr = 867 OR pokedex_nbr = 968;
+pokedex_nbr = 609 OR pokedex_nbr = 738 OR pokedex_nbr = 864 OR pokedex_nbr = 890
+OR pokedex_nbr = 897;
 
 UPDATE pokedex SET stats = json_set(stats, '$[3].value', 150) WHERE
-pokedex_nbr = 379 OR pokedex_nbr = 680 OR pokedex_nbr = 703 OR pokedex_nbr = 719;
+pokedex_nbr = 382 OR pokedex_nbr = 384 OR pokedex_nbr = 386 OR pokedex_nbr = 483
+OR pokedex_nbr = 484 OR pokedex_nbr = 643 OR pokedex_nbr = 720;
 
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 152) WHERE
-pokedex_nbr = 748;
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 151) WHERE
+pokedex_nbr = 806;
 
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 160) WHERE
-pokedex_nbr = 95 OR pokedex_nbr = 1025;
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 154) WHERE
+pokedex_nbr = 150;
 
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 168) WHERE
-pokedex_nbr = 411;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 180) WHERE
-pokedex_nbr = 91 OR pokedex_nbr = 306;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 184) WHERE
-pokedex_nbr = 713;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 200) WHERE
-pokedex_nbr = 208 OR pokedex_nbr = 377;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 211) WHERE
-pokedex_nbr = 805;
-
-UPDATE pokedex SET stats = json_set(stats, '$[3].value', 230) WHERE
-pokedex_nbr = 213;
+UPDATE pokedex SET stats = json_set(stats, '$[3].value', 173) WHERE
+pokedex_nbr = 796;
 COMMIT;
