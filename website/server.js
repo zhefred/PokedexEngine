@@ -20,7 +20,6 @@ app.set('views', './views');
 app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -36,6 +35,10 @@ app.get('/pokemon', (req, res) => {
 
 app.get('/playnow', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'playnow.html'));
+});
+
+app.get('/trivia', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'trivia.html'));
 });
 
 app.get('/api/pokedex', (req, res) => {
